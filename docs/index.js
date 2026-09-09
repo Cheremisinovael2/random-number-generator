@@ -41,15 +41,21 @@
 /******/ 	
 /************************************************************************/
 
-;// ./src/images/image.jpg
-const image_namespaceObject = __webpack_require__.p + "images/6373cac8eccfb40124d1.jpg";
+;// ./src/images/flower.jpg
+const flower_namespaceObject = __webpack_require__.p + "images/acbeed884b4b971dd90f.jpg";
 ;// ./src/index.js
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  var image = new Image();
-  image.src = image_namespaceObject;
-  document.querySelector('.images').appendChild(image);
+var src_button = document.querySelector('.generate');
+var result = document.querySelector('.result');
+src_button.addEventListener('click', function () {
+  var number = Math.floor(Math.random() * 1000) + 1;
+  result.textContent = number;
+});
+new HtmlWebpackPlugin({
+  template: './src/index.html',
+  filename: './index.html',
+  favicon: './src/images/favicon.svg'
 });
 /******/ })()
 ;
