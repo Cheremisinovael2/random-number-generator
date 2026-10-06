@@ -103,3 +103,8 @@ module.exports = {
     minimizer: [new CssMinimizerPlugin()]
   }
 }
+
+const htmlPages = [
+  createPages('.src/index.html', 'index.html', ['index']),
+  createPages('.src/game.html', 'game.html', ['game']),
+]
